@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="example.com" id="input"/>
+    <button id="ok-btn" onclick="btnOk()">OK</button> <br />
+    <button id='shrt-btn' onclick="btnShrt()" value="shrtco.de">shrtco.de</button>
+    <button id='9qr-btn' onclick="btn9qr()" value="9qr.de">9qr.de</button>
+    <button id='shiny-btn' onclick="btnShiny()" value="shiny.link">shiny.link</button>
+    <br />
+    <a id="link"></a>
+    <script>
+        function btnShrt() {
+            let link = document.getElementById('link')
+            let shrt = document.getElementById('shrt-btn')
+            link.innerHTML = shrt.value
+        }
+
+        function btnOk() {
+            let input = document.getElementById('input')
+            let link = document.getElementById('link')
+            link.style.href = input.value
+
+        }
+    </script>
+</body>
+</html>
