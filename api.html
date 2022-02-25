@@ -8,26 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <input placeholder="example.com" id="input"/>
-    <button id="ok-btn" onclick="btnOk()">OK</button> <br />
-    <button id='shrt-btn' onclick="btnShrt()" value="shrtco.de">shrtco.de</button>
-    <button id='9qr-btn' onclick="btn9qr()" value="9qr.de">9qr.de</button>
-    <button id='shiny-btn' onclick="btnShiny()" value="shiny.link">shiny.link</button>
-    <br />
+    <input placeholder="example.com" id="link"/>
+    <button id='shrt-btn' onclick="btnShrt()" >shrtco.de</button>
+    <button id='9qr-btn' onclick="btn9qr()" >9qr.de</button>
+    <button id='shiny-btn' onclick="btnShiny()" >shiny.link</button>
     <a id="link"></a>
-    <script>
-        function btnShrt() {
-            let link = document.getElementById('link')
-            let shrt = document.getElementById('shrt-btn')
-            link.innerHTML = shrt.value
-        }
-
-        function btnOk() {
-            let input = document.getElementById('input')
-            let link = document.getElementById('link')
-            link.style.href = input.value
-
-        }
-    </script>
+    <ul id="post-link"></ul>
+    <script src="api.js"></script>
 </body>
 </html>
